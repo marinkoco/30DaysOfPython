@@ -1,5 +1,14 @@
 # Day 2 - 30DaysOfPython Challenge
+# Variables in Python
+person_info = {
+   'firstname':'Ivan',
+   'lastname':'Marinkovic',
+   'country':'Serbia',
+   'city':'Belgrade'
+   }
+print(person_info)
 
+# Declaring Multiple Variable in a Line
 # Printing the values stored in the variables
 first_name, last_name, country, age, is_married = 'Ivan', 'Marinkovic', 'Serbia', 44, True
 print(first_name, last_name, country, age, is_married)
@@ -8,6 +17,11 @@ print('Last name: ', last_name)
 print('Country: ', country)
 print('Age: ', age)
 print('Married: ', is_married)
+
+# Use the print() and len() built-in functions
+print('Hello, World!') # The text Hello, World! is an argument
+print('Hello',',', 'World','!') # it can take multiple arguments, four arguments have been passed
+print(len('Hello, World!')) # it takes only one argument
 
 # Getting user input using the input() built-in function.
 first_name = input('What is your name: ')
