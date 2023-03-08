@@ -1,3 +1,3 @@
-for i in range(1, 6):
-    row = f"{i} {1} {i} {i*i} {i*i*i}"
-    print(row)
+array_v = ['horse', 'chicken', 'dog']
+result = ' '.join(array_v)
+print(result)
