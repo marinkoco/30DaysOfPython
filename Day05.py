@@ -113,8 +113,8 @@ print(does_exist)  # False
 
 # Adding Items to a List
 # syntax
-lst = list()
-lst.append(item)
+# lst = list()
+# lst.append(item)
 
 fruits = ['banana', 'orange', 'mango', 'lemon']
 fruits.append('apple')
@@ -126,8 +126,8 @@ print(fruits)
 # We can use insert() method to insert a single item at a specified index in a list. Note that other items are shifted to the right.
 # The insert() methods takes two arguments:index and an item to insert.
 # syntax
-lst = ['item1', 'item2']
-lst.insert(index, item)
+# lst = ['item1', 'item2']
+# lst.insert(index, item)
 
 fruits = ['banana', 'orange', 'mango', 'lemon']
 fruits.insert(2, 'apple') # insert apple between orange and mango
