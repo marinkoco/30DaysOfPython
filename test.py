@@ -1,3 +1,3 @@
-array_v = ['horse', 'chicken', 'dog']
-result = ' '.join(array_v)
-print(result)
+animals = ['dog', 'cat', 'hen', 'fox']
+exist = 'cat' in animals
+print(exist)
