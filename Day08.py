@@ -4,91 +4,93 @@
 # Creating a Dictionary
 # The dictionary below shows that a value could be any data types:string, boolean, list, tuple, set or a dictionary.
 person = {
-    'first_name':'Ivan',
-    'last_name':'Marinkovic',
-    'age':250,
-    'country':'Serbia',
-    'is_marred':True,
-    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address':{
-        'street':'Space street',
-        'zipcode':'02210'
+    'first_name': 'Ivan',
+    'last_name': 'Marinkovic',
+    'age': 250,
+    'country': 'Serbia',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
     }
-    }
+}
 
 # Dictionary Length
 # It checks the number of 'key: value' pairs in the dictionary.
 
 person = {
-    'first_name':'Ivan',
-    'last_name':'Marinkovic',
-    'age':250,
-    'country':'Serbia',
-    'is_marred':True,
-    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address':{
-        'street':'Space street',
-        'zipcode':'02210'
+    'first_name': 'Ivan',
+    'last_name': 'Marinkovic',
+    'age': 250,
+    'country': 'Serbia',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
     }
-    }
-print(len(person)) # 7
+}
+print(len(person))  # 7
 
 # Accessing Dictionary Items
 # We can access Dictionary items by referring to its key name.
 
 person = {
-    'first_name':'Ivan',
-    'last_name':'Marinkovic',
-    'age':250,
-    'country':'Serbia',
-    'is_marred':True,
-    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address':{
-        'street':'Space street',
-        'zipcode':'02210'
+    'first_name': 'Ivan',
+    'last_name': 'Marinkovic',
+    'age': 250,
+    'country': 'Serbia',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
     }
-    }
-print(person['first_name']) # Ivan
+}
+print(person['first_name'])  # Ivan
 print(person['country'])    # Marinkovic
-print(person['skills'])     # ['JavaScript', 'React', 'Node', 'MongoDB', 'Python']
+# ['JavaScript', 'React', 'Node', 'MongoDB', 'Python']
+print(person['skills'])
 print(person['skills'][0])  # JavaScript
-print(person['address']['street']) # Space street
+print(person['address']['street'])  # Space street
 print(person['city'])       # Error
 
-# Accessing an item by key name raises an error if the key does not exist. 
-# To avoid this error first we have to check if a key exist or we can use the get method. 
+# Accessing an item by key name raises an error if the key does not exist.
+# To avoid this error first we have to check if a key exist or we can use the get method.
 # The get method returns None, which is a NoneType object data type, if the key does not exist.
 
 person = {
-    'first_name':'Ivan',
-    'last_name':'Marinkovic',
-    'age':250,
-    'country':'Serbia',
-    'is_marred':True,
-    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address':{
-        'street':'Space street',
-        'zipcode':'02210'
+    'first_name': 'Ivan',
+    'last_name': 'Marinkovic',
+    'age': 250,
+    'country': 'Serbia',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
     }
-    }
-print(person.get('first_name')) # Ivan
+}
+print(person.get('first_name'))  # Ivan
 print(person.get('country'))    # Serbia
-print(person.get('skills')) #['HTML','CSS','JavaScript', 'React', 'Node', 'MongoDB', 'Python']
+# ['HTML','CSS','JavaScript', 'React', 'Node', 'MongoDB', 'Python']
+print(person.get('skills'))
 print(person.get('city'))   # None
-print(person.get('address',{}).get('street')) # Space street
+print(person.get('address', {}).get('street'))  # Space street
 
 # Adding Items to a Dictionary
 person = {
-    'first_name':'Ivan',
-    'last_name':'Marinkovic',
-    'age':250,
-    'country':'Serbia',
-    'is_marred':True,
-    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address':{
-        'street':'Space street',
-        'zipcode':'02210'
-        }
+    'first_name': 'Ivan',
+    'last_name': 'Marinkovic',
+    'age': 250,
+    'country': 'Serbia',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
 }
 person['job_title'] = 'Instructor'
 person['skills'].append('HTML')
@@ -97,17 +99,17 @@ print(person)
 
 # Modifying Items in a Dictionary
 person = {
-    'first_name':'Ivan',
-    'last_name':'Marinkovic',
-    'age':250,
-    'country':'Serbia',
-    'is_marred':True,
-    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address':{
-        'street':'Space street',
-        'zipcode':'02210'
+    'first_name': 'Ivan',
+    'last_name': 'Marinkovic',
+    'age': 250,
+    'country': 'Serbia',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
     }
-    }
+}
 person['first_name'] = 'Johnny'
 person['age'] = 252
 person['address']['zipcode'] = '02220'
@@ -120,17 +122,17 @@ print(person)
 # popitem(): removes the last item
 # del: removes an item with specified key name
 person = {
-    'first_name':'Ivan',
-    'last_name':'Marinkovic',
-    'age':250,
-    'country':'Serbia',
-    'is_marred':True,
-    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address':{
-        'street':'Space street',
-        'zipcode':'02210'
+    'first_name': 'Ivan',
+    'last_name': 'Marinkovic',
+    'age': 250,
+    'country': 'Serbia',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
     }
-    }
+}
 person.pop('first_name')        # Removes the firstname item
 person['address'].pop('street')
 # or
@@ -141,17 +143,17 @@ del person['is_married']        # Removes the is_married item
 # Changing Dictionary to a List of Items
 # The items() method changes dictionary to a list of tuples.
 person = {
-    'first_name':'Ivan',
-    'last_name':'Marinkovic',
-    'age':250,
-    'country':'Serbia',
-    'is_marred':True,
-    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address':{
-        'street':'Space street',
-        'zipcode':'02210'
+    'first_name': 'Ivan',
+    'last_name': 'Marinkovic',
+    'age': 250,
+    'country': 'Serbia',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
     }
-    }
+}
 print(person.items())
 
 # Clearing a Dictionary
