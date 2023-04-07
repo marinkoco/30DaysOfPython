@@ -1,7 +1,4 @@
-try:
-    name = input('Your name is: ')
-    birth_year = int(input('Your birth year is: '))
-    age = 2023 - birth_year
-    print(f'You are {name} and your age is {age}')
-except TypeError:
-    print('Type error occured.')
+with open('C:/TEST/test.txt', 'w') as f:
+    f.write('Prva linija')
+with open('C:/TEST/test.txt', 'a') as f:
+    f.write('Druga linija.')
