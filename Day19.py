@@ -97,7 +97,7 @@ else:
 # File with json Extension
 # JSON stands for JavaScript Object Notation. Actually, it is a stringified JavaScript object or Python dictionary.
 
-Example:
+# Example:
 
 # dictionary
 person_dct= {
