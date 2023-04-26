@@ -295,3 +295,297 @@ print('Vertical Append:', np.vstack((np_list_one, np_list_two)))
     #  [4 5 6]]
 
 # Generating Random Numbers
+
+    # Generate a random float  number
+random_float = np.random.random()
+random_float
+
+    # Generate a random float  numbers in aray
+random_floats = np.random.random(5)
+random_floats
+
+    # Generating a random integers between 0 and 10
+random_int = np.random.randint(0, 11)
+random_int
+
+    # Generating a random integers between 2 and 11, and creating a one row array
+random_int = np.random.randint(2, 10, size=4)
+random_int
+# array([8, 8, 8, 2])
+
+    # Generating a random integers between 0 and 10
+random_int = np.random.randint(2, 10, size=(3, 3))
+random_int
+ #array([[3, 5, 3],
+ #       [7, 3, 6],
+ #       [2, 3, 3]])
+
+# Generationg random numbers
+    # np.random.normal(mu, sigma, size)
+normal_array = np.random.normal(79, 15, 80)
+normal_array
+
+# Numpy and Statistics
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+plt.hist(normal_array, color="grey", bins=50)
+
+# Matrix in numpy
+
+four_by_four_matrix = np.matrix(np.ones((4,4), dtype=float))
+four_by_four_matrix
+# matrix([[1., 1., 1., 1.],
+#             [1., 1., 1., 1.],
+#             [1., 1., 1., 1.],
+#             [1., 1., 1., 1.]])
+
+np.asarray(four_by_four_matrix)[2] = 2
+four_by_four_matrix
+# matrix([[1., 1., 1., 1.],
+#             [1., 1., 1., 1.],
+#             [2., 2., 2., 2.],
+#             [1., 1., 1., 1.]])
+
+# Numpy numpy.arange()
+# What is Arrange?
+# Sometimes, you want to create values that are evenly spaced within a defined interval. 
+# For instance, you want to create values from 1 to 10; you can use numpy.arange() function
+# creating list using range(starting, stop, step)
+lst = range(0, 11, 2)
+lst
+for l in lst:
+    print(l)
+# 0
+# 2
+# 4
+# 6
+# 8
+# 10
+
+# Similar to range arange numpy.arange(start, stop, step)
+whole_numbers = np.arange(0, 20, 1)
+whole_numbers
+
+# array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+#            17, 18, 19])
+
+natural_numbers = np.arange(1, 20, 1)
+natural_numbers
+
+odd_numbers = np.arange(1, 20, 2)
+odd_numbers
+
+even_numbers = np.arange(2, 20, 2)
+even_numbers
+
+# Creating sequence of numbers using linspace
+
+# numpy.linspace()
+# numpy.logspace() in Python with Example
+# For instance, it can be used to create 10 values from 1 to 5 evenly spaced.
+np.linspace(1.0, 5.0, num=10)
+#    array([1.        , 1.44444444, 1.88888889, 2.33333333, 2.77777778,
+#           3.22222222, 3.66666667, 4.11111111, 4.55555556, 5.        ])
+
+# LogSpace
+# LogSpace returns even spaced numbers on a log scale. Logspace has the same parameters as np.linspace.
+
+# Syntax:
+
+# numpy.logspace(start, stop, num, endpoint)
+
+np.logspace(2, 4.0, num=4)
+# array([  100.        ,   464.15888336,  2154.43469003, 10000.        ])
+
+# to check the size of an array
+x = np.array([1,2,3], dtype=np.complex128)
+x
+# array([1.+0.j, 2.+0.j, 3.+0.j])
+x.itemsize
+# 16
+
+# indexing and Slicing NumPy Arrays in Python
+np_list = np.array([(1,2,3), (4,5,6)])
+np_list
+#    array([[1, 2, 3],
+#           [4, 5, 6]])
+print('First row: ', np_list[0])
+print('Second row: ', np_list[1])
+#    First row:  [1 2 3]
+#    Second row:  [4 5 6]
+
+print('First column: ', np_list[:,0])
+print('Second column: ', np_list[:,1])
+print('Third column: ', np_list[:,2])
+#    First column:  [1 4]
+#    Second column:  [2 5]
+#    Third column:  [3 6]
+
+# NumPy Statistical Functions with Example
+# NumPy has quite useful statistical functions for finding minimum, maximum, mean, median, percentile,standard deviation and variance, etc from the given elements in the array. The functions are explained as follows − Statistical function Numpy is equipped with the robust statistical function as listed below
+# 
+# Numpy Functions
+# Min np.min()
+# Max np.max()
+# Mean np.mean()
+# Median np.median()
+# Varience
+# Percentile
+# Standard deviation np.std()
+
+two_dimension_array = np.array([(1,2,3),(4,5,6), (7,8,9)])
+np_normal_dis = np.random.normal(5, 0.5, 100)
+np_normal_dis
+## min, max, mean, median, sd
+print('min: ', np_normal_dis.min())
+print('max: ', two_dimension_array.max())
+print('mean: ',two_dimension_array.mean())
+# print('median: ', two_dimension_array.median())
+print('sd: ', two_dimension_array.std())
+
+print(two_dimension_array)
+print('Column with minimum: ', np.amin(two_dimension_array,axis=0))
+print('Column with maximum: ', np.amax(two_dimension_array,axis=0))
+print('=== Row ==')
+print('Row with minimum: ', np.amin(two_dimension_array,axis=1))
+print('Row with maximum: ', np.amax(two_dimension_array,axis=1))
+
+# How to create repeating sequences?
+
+a = [1,2,3]
+
+# Repeat whole of 'a' two times
+print('Tile:   ', np.tile(a, 2))
+
+# Repeat each element of 'a' two times
+print('Repeat: ', np.repeat(a, 2))
+
+# Tile:    [1 2 3 1 2 3]
+# Repeat:  [1 1 2 2 3 3]
+
+# How to generate random numbers?
+# One random number between [0,1)
+one_random_num = np.random.random()
+one_random_in = np.random
+print(one_random_num)
+
+# Random numbers between [0,1) of shape 2,3
+r = np.random.random(size=[2,3])
+print(r)
+
+print(np.random.choice(['a', 'e', 'i', 'o', 'u'], size=10))
+# ['u' 'u' 'o' 'o' 'o' 'u' 'u' 'i' 'i' 'u']
+
+## Random numbers between [0, 1] of shape 2, 2
+rand = np.random.rand(2,2)
+rand
+
+rand2 = np.random.randn(2,2)
+rand2
+
+# Random integers between [0, 10) of shape 2,5
+rand_int = np.random.randint(0, 10, size=[2,5])
+rand_int
+
+from scipy import stats
+np_normal_dis = np.random.normal(5, 0.5, 1000) # mean, standard deviation, number of samples
+np_normal_dis
+## min, max, mean, median, sd
+print('min: ', np.min(np_normal_dis))
+print('max: ', np.max(np_normal_dis))
+print('mean: ', np.mean(np_normal_dis))
+print('median: ', np.median(np_normal_dis))
+print('mode: ', stats.mode(np_normal_dis))
+print('sd: ', np.std(np_normal_dis))
+
+# min:  3.2862164657791233
+# max:  6.9219224726389195
+# mean:  5.010718503125006
+# median:  5.008130211527713
+# mode:  ModeResult(mode=array([3.28621647]), count=array([1]))
+# sd:  0.503017160549998
+
+import matplotlib.pyplot as plt
+plt.hist(np_normal_dis, color="grey", bins=21)
+plt.show()
+
+# numpy.dot(): Dot Product in Python using Numpy
+# Dot Product
+# Numpy is powerful library for matrices computation. For instance, you can compute the dot product with np.dot
+
+# Syntax
+
+# numpy.dot(x, y, out=None)
+
+# Linear Algebra
+
+# 1. Dot Product
+
+## Linear algebra
+### Dot product: product of two arrays
+f = np.array([1,2,3])
+g = np.array([4,5,3])
+### 1*4+2*5 + 3*6
+np.dot(f, g)  # 23
+
+# NumPy Matrix Multiplication with np.matmul()
+### Matmul: matruc product of two arrays
+h = [[1,2],[3,4]]
+i = [[5,6],[7,8]]
+### 1*5+2*7 = 19
+np.matmul(h, i)
+#    array([[19, 22],
+#           [43, 50]])
+
+## Determinant 2*2 matrix
+### 5*8-7*6
+# np.linalg.det(i)
+# -1.999999999999999
+
+Z = np.zeros((8,8))
+Z[1::2,::2] = 1
+Z[::2,1::2] = 1
+Z
+# array([[0., 1., 0., 1., 0., 1., 0., 1.],
+#        [1., 0., 1., 0., 1., 0., 1., 0.],
+#        [0., 1., 0., 1., 0., 1., 0., 1.],
+#        [1., 0., 1., 0., 1., 0., 1., 0.],
+#        [0., 1., 0., 1., 0., 1., 0., 1.],
+#        [1., 0., 1., 0., 1., 0., 1., 0.],
+#        [0., 1., 0., 1., 0., 1., 0., 1.],
+#        [1., 0., 1., 0., 1., 0., 1., 0.]])
+
+new_list = [ x + 2 for x in range(0, 11)]
+new_list
+# [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+np_arr = np.array(range(0, 11))
+np_arr + 2
+# array([ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+# We use linear equation for quantities which have linear relationship. Let's see the example below:
+temp = np.array([1,2,3,4,5])
+pressure = temp * 2 + 5
+pressure
+# array([ 7, 9, 11, 13, 15])
+
+plt.plot(temp,pressure)
+plt.xlabel('Temperature in oC')
+plt.ylabel('Pressure in atm')
+plt.title('Temperature vs Pressure')
+plt.xticks(np.arange(0, 6, step=0.5))
+plt.show()
+
+# To draw the Gaussian normal distribution using numpy. 
+# As you can see below, the numpy can generate random numbers. 
+# To create random sample, we need the mean(mu), sigma(standard deviation), mumber of data points.
+
+mu = 28
+sigma = 15
+samples = 100000
+
+x = np.random.normal(mu, sigma, samples)
+ax = sns.distplot(x)
+ax.set(xlabel="x", ylabel='y')
+plt.show()
