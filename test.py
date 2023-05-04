@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-MONGODB_URI = 'mongodb+srv://marinkoco:6t5g7qr6ewQFxRTV@30daysofpython.wzhhpfw.mongodb.net/?retryWrites=true&w=majority'
+MONGODB_URI = 'mongodb+srv://marinkoco:xxxx@30daysofpython.wzhhpfw.mongodb.net/?retryWrites=true&w=majority'
 client = pymongo.MongoClient(MONGODB_URI)
 db = client['30DaysofPython']  # accessing the database
 students = list(db.students.find())
